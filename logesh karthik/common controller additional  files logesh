@@ -1,0 +1,14 @@
+else if($type == 'add_table'){
+   
+         $add_table = gosql("INSERT INTO tables (table_name,short_name,table_capacity,is_active) VALUES ('".$_REQUEST["tablename"]."','".$_REQUEST["shortname"]."','".$_REQUEST["tablecapacity"]."','".$_REQUEST["is_available"]."')");
+}
+ 
+
+else if($type == 'add_user'){
+  
+	$add_table = gosql("INSERT INTO users (username,email,phone,role,password) VALUES ('".$_REQUEST["username"]."','".$_REQUEST["useremail"]."','".$_REQUEST["userphone"]."','".$_REQUEST["userrole"]."','".$_REQUEST["userpassword"]."')");
+} 
+else if($type == 'add_role'){
+    
+     $add_table = gosql("INSERT INTO role (role) VALUES ('".$_REQUEST["userrole"]."')");
+ } 
